@@ -1,0 +1,55 @@
+Repeatedly prompts user for text - while loop
+Spaces shld be supported
+Detect invalid input such as empty string, and numbers
+	use cerr to make error message
+	Should be prompted to re-enter text
+User input should be repeated continuously
+
+
+Tabulate each character with a '|', could use a for range loop
+	2 spaces either side of char
+
+Generate lines above and below the text alternating between '-' and '=', must be same length of the text, need to get num of chars in string { [identifier].length() }
+	Use a '+' on places where it would line up with a '|'
+		That means one '+' every 6 spaces
+
+------------------------------------------------------------------------
+
+pre-req:
+	Input is saved in a string
+		needs #include 'string'
+	num of chars saved as an int
+	
+------------------------------------------------------------------------
+
+1. Create validation function
+	should return a bool
+	should take string as parameter
+		if statement, use .empty() as condition
+			True: return false
+			False: return true
+
+
+2. While loop 
+	Condition could be while the input != "exit"
+		If yes: exit program
+		If no: continue
+
+3. If statement
+	Check that input is valid
+		use the valid function as a condition
+			False: produce error, reference function again to restart thus prompting them for text again
+			True: continue
+
+4. Make function to create lines, should take num of chars as input 
+	for loop (int i = 0; i <= num of chars; i++)
+		This loop should print "+=-=-="
+		When finished print "+\n"
+
+
+5. for loop going through all chars in a string { for(char& c : [input identifier]) }
+	Should print "|  " << c << "  "
+
+6. Call line function again
+
+7. Call main();
