@@ -39,7 +39,8 @@ int main()
 	// The getline function in this case reads the users input, and stores it in the 'userInput' variable declared above
 	if (tryAgain)
 	{
-		
+		// Uses 'cerr' to print out an error message
+		cerr << "\n[!] ERROR: Invalid input , nothing entered. Try again: ";
 	}
 	else {
 		cout << "\nPlease enter a sentence, type 'exit' to exit the program: ";
@@ -88,9 +89,6 @@ int main()
 		}
 		else {
 			tryAgain = true;
-
-			// Uses 'cerr' to print out an error message
-			cerr << "\n[!] ERROR: Invalid input , nothing entered. Try again: ";
 
 			// Calls the main function so the user can go again
 			main();
