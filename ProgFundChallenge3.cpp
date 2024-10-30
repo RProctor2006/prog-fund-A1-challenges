@@ -6,12 +6,16 @@
 
 using namespace std;
 
+enum appErrors {
+    ERROR_INVALID_INPUT = 1
+};
+
 int main()
 {
     float playerNum;
 
     cout << "Please enter a number: ";
-    
+
     if (!(cin >> playerNum)) {
 
         cin.clear();
@@ -19,8 +23,7 @@ int main()
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         cerr << "Error: That was not a number.\n";
-        cout << "ERROR_INVALID_INPUT";
-        exit(0);
+        return ERROR_INVALID_INPUT;
     }
 
     float negation = playerNum * -1;
