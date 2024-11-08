@@ -1,0 +1,57 @@
+Challenge 6:
+
+Keep in Mind:
+keep track of number of VALID guesses
+no minuses
+
+
+player guess between 0 - 100
+invalid if: outside 0 - 100, not a digit
+
+states check diff (diff):
+add all numbers into array (50, 35, 25...)
+while loop - while (bool complete == false)
+int i = 0;
+if diff > arr[i]
+return states[i]
+else if arr[i + 1] <= d && d < arr[i]
+i++;
+return states[i]
+complete = true;
+else if diff == 0
+return states = completed
+
+int Check Valid:
+bool valid
+while (valid == false)
+prompt for guess
+if (!(cin [identifier]))
+error text
+else if (not in range)
+error text
+else: valid = true;
+return guess;
+
+void SwitchState (states state)
+switch (state)
+print out messages
+
+gameloop (bool& win)
+int guess = checkvalid()
+[gen rand num]
+diff = abs(guess - rand)
+states currentstate = checkdiff(diff)
+switchstate (currentstate)
+
+if current state == completed
+win = true
+
+order of op:
+
+while won == false
+gameloop(won)
+}
+
+[win text]
+
+
